@@ -16,11 +16,9 @@
 
 <img height="480em" src="././src//public/assets/images/Apresentacao-API-Smartphones.png"  align="center"> 
 
-
-***
-
 <br>
 
+***
 <div align="left">
 
 ## Índice
@@ -89,8 +87,12 @@ O servidor retornará uma mensagem de erro 404 se o item não for encontrado par
 
 *** 
 ## Tecnologias
-
 <img src="https://media.giphy.com/media/iT138SodaACo9LImgi/giphy.gif" align="center" height="75" width="75"> Tecnologias utilizadas no projeto:
+
+- ``JavaScript (JS)`` 
+"Linguagem de Programação do Navegador". 
+"Scripting Dinâmico para Web".
+<br>
 
 - ``Node.js``
 "Ambiente de Execução JavaScript do Lado do Servidor".
@@ -132,7 +134,6 @@ O servidor retornará uma mensagem de erro 404 se o item não for encontrado par
 ***
 ## Licença
 - Esse projeto está sob a licença MIT.
-
 <br>
 
 ***
