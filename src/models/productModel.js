@@ -6,7 +6,7 @@ const isVercel = process.env.VERCEL === "1";
 
 // Define o caminho do arquivo de dados de acordo com o ambiente
 const dataFilePath = isVercel
-  ? "/tmp/products.json"
+  ? path.join(__dirname, "../tmp/products.json")
   : path.join(__dirname, "../data/products.json");
 
 // Função para ler o arquivo JSON
