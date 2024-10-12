@@ -19,5 +19,19 @@
     "quantity": 10,
     "price": 4999,
     "id": 3
+  },
+  {
+    "title": " iPhone 15 Pro",
+    "description": "O iPhone 15 Pro conta com um design em titânio, tela Super Retina XDR de 6,1 chip A17 Bionic e câmeras triplas de 48 MP.",
+    "quantity": 10,
+    "price": 9.499,
+    "id": 4
+  },
+  {
+    "title": "iPhone 14 Pro",
+    "description": "iPhone 14 Pro com tela Super Retina XDR de 6.1 polegadas, chip A16 Bionic, sistema de câmera tripla.",
+    "quantity": 10,
+    "price": 4.999,
+    "id": 5
   }
 ]

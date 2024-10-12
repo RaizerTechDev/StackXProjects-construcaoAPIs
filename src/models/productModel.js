@@ -1,7 +1,13 @@
 const fs = require("fs");
 const path = require("path");
-// Definir o caminho para o diretório temporário no Vercel
-const dataFilePath = "/tmp/products.json"; // Diretório temporário permitido no Vercel
+
+// Verifica se está rodando no ambiente de produção (Vercel)
+const isVercel = process.env.VERCEL === "1";
+
+// Define o caminho do arquivo de dados de acordo com o ambiente
+const dataFilePath = isVercel
+  ? "/tmp/products.json"
+  : path.join(__dirname, "../data/products.json");
 
 // Função para ler o arquivo JSON
 function readData() {
@@ -16,7 +22,7 @@ function readData() {
   }
 }
 
-// Função para escrever as validações dos campos da pasta(middlewares) no arquivo JSON
+// Função para escrever os dados no arquivo JSON
 function writeData(products) {
   try {
     fs.writeFileSync(dataFilePath, JSON.stringify(products, null, 2));
@@ -27,7 +33,7 @@ function writeData(products) {
 
 module.exports = {
   getAll() {
-    return readData(); // Retorna todos os produtos (celulares)
+    return readData(); // Retorna todos os produtos
   },
 
   getById(id) {
