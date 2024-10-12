@@ -1,16 +1,28 @@
 const fs = require("fs");
 const path = require("path");
-const dataFilePath = path.join(__dirname, "../data/products.json");
+// Definir o caminho para o diretório temporário no Vercel
+const dataFilePath = "/tmp/products.json"; // Diretório temporário permitido no Vercel
 
 // Função para ler o arquivo JSON
 function readData() {
-  const data = fs.readFileSync(dataFilePath, "utf-8");
-  return JSON.parse(data);
+  try {
+    const data = fs.readFileSync(dataFilePath, "utf-8");
+    return JSON.parse(data);
+  } catch (err) {
+    console.log(
+      "Arquivo não encontrado ou erro na leitura, iniciando com um array vazio."
+    );
+    return [];
+  }
 }
 
-// Função para escrever as validações dos campos da pasta(middlewares) no arquivo JSON 
+// Função para escrever as validações dos campos da pasta(middlewares) no arquivo JSON
 function writeData(products) {
-  fs.writeFileSync(dataFilePath, JSON.stringify(products, null, 2));
+  try {
+    fs.writeFileSync(dataFilePath, JSON.stringify(products, null, 2));
+  } catch (err) {
+    console.error("Erro ao gravar os dados:", err);
+  }
 }
 
 module.exports = {
