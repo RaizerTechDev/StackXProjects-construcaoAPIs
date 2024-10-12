@@ -2,22 +2,26 @@ const fs = require("fs");
 const path = require("path");
 
 // Verifica se está rodando no ambiente de produção (Vercel)
-const isVercel = process.env.VERCEL === "1";
+const isVercel = process.env.VERCEL === '1';
 
 // Define o caminho do arquivo de dados de acordo com o ambiente
-const dataFilePath = isVercel
-  ? path.join(__dirname, "../tmp/products.json")
-  : path.join(__dirname, "../data/products.json");
+const dataFilePath = isVercel ? '/tmp/products.json' : path.join(__dirname, "../data/products.json");
+
+// Função para garantir que o arquivo exista
+function ensureFileExists() {
+  if (!fs.existsSync(dataFilePath)) {
+    writeData([]); // Cria o arquivo com um array vazio
+  }
+}
 
 // Função para ler o arquivo JSON
 function readData() {
+  ensureFileExists(); // Garantir que o arquivo exista
   try {
     const data = fs.readFileSync(dataFilePath, "utf-8");
     return JSON.parse(data);
   } catch (err) {
-    console.log(
-      "Arquivo não encontrado ou erro na leitura, iniciando com um array vazio."
-    );
+    console.log("Erro ao ler o arquivo:", err);
     return [];
   }
 }
