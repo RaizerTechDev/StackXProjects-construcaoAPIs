@@ -1,7 +1,6 @@
-require('dotenv').config(); // Adicione esta linha no topo do arquivo
-
-const express = require('express');
-const productRoutes = require('./routes/productRoutes');
+require("dotenv").config();
+const express = require("express");
+const productRoutes = require("./routes/productRoutes");
 
 const app = express();
 
@@ -24,7 +23,7 @@ app.get("/", (req, res) => {
 });
 
 // Rotas
-app.use('/api/products', productRoutes);
+app.use("/api/products", productRoutes);
 
 // Porta
 const PORT = process.env.PORT || 3000;

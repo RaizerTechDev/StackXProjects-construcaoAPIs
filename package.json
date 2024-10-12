@@ -17,6 +17,7 @@
     "filesystem": "^1.0.1",
     "fs": "^0.0.1-security",
     "joi": "^17.13.3",
+    "serve-favicon": "^2.5.0",
     "stackxprojects-construcaoapis": "file:",
     "uuid": "^10.0.0"
   },
