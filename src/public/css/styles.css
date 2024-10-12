@@ -1,0 +1,85 @@
+body {
+    background-image: url('../assets/images/api-fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: "Montserrat", sans-serif; /* Define a família de fontes */
+    text-align: center;
+    color: #fff;
+}
+
+/* Estilos para telas menores (mobile e tablet) */
+h1 {
+    margin-top: 100px; /* Ajuste para centralizar melhor em telas pequenas */
+    margin-left: 50px; /* Centraliza o título */
+    color: #fefeff;
+    font-size: 45px; /* Tamanho menor para telas pequenas */
+    font-weight: bold;
+    font-style: italic;  
+}
+
+h2 {
+    margin-top: -40px;
+    margin-left: 0; /* Centraliza o subtítulo */
+    font-size: 30px; /* Tamanho menor para telas pequenas */
+}
+
+
+/* Media Query para telas grandes (tablet e desktop) */
+@media (min-width: 769px) {
+    h1 {
+        margin-top: 400px; 
+        margin-left: 70px; 
+        font-size: 55px;
+        color: #7db3f6;
+    }
+
+    h2 {        
+        font-size: 38px;
+        margin-left: -60px; 
+        margin-top: 60px; 
+    }
+}
+
+/* Media Query para telas maiores (desktop) */
+@media (min-width: 1024px ) {
+    h1 {
+        margin-top: 340px; 
+        margin-left: 25px; 
+        color: #7db3f6;
+       font-size: 55px;
+       font-weight: bold;
+       font-style: italic;        
+    }
+
+    h2 {        
+        margin-top: 60px;
+        margin-right: -50px;
+       font-size: 38px; 
+    }
+}
+
+span {
+    color: rgb(253, 207, 120);
+}
+
+/* Media Query para telas maiores (desktop) */
+@media (min-width: 1920px)  {
+    h1 {
+        margin-top: 300px; 
+        margin-left: 270px; 
+        color: #7db3f6;
+       font-size: 48px;
+       font-weight: bold;
+       font-style: italic;        
+    }
+
+    h2 {        
+        margin-top: 30px;
+        margin-right: -250px;
+       font-size: 35px; 
+    }
+}
+
+span {
+    color: rgb(253, 207, 120);
+}
