@@ -7,7 +7,7 @@ const isVercel = process.env.VERCEL === "1";
 
 // Define o caminho do arquivo de dados de acordo com o ambiente
 const dataFilePath = isVercel
-  ? "/tmp/products.json"
+  ? path.join(__dirname, "../tmp/products.json")
   : path.join(__dirname, "../data/products.json");
 
 // Conexão com o MongoDB (somente em produção)
@@ -40,13 +40,15 @@ function ensureFileExists() {
 
 // Função para ler o arquivo JSON
 function readData() {
-  ensureFileExists();
+  ensureFileExists(); // Garantir que o arquivo exista
   try {
     const data = fs.readFileSync(dataFilePath, "utf-8");
     return JSON.parse(data); // Faz o parse do JSON
   } catch (err) {
-    console.error("Erro ao ler o arquivo:", err);
-    return []; // Retorna um array vazio em caso de erro
+    console.log(
+      "Arquivo não encontrado ou erro na leitura, iniciando com um array vazio."
+    );
+    return [];
   }
 }
 
