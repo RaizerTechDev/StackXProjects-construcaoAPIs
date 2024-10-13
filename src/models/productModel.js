@@ -65,7 +65,14 @@ module.exports = {
   async getAll() {
     if (isVercel) {
       try {
-        return await Product.find();
+        const products = await Product.find();
+        return products.map((product) => ({
+          id: product._id, // Mapeia o ObjectId para "id"
+          title: product.title,
+          description: product.description,
+          price: product.price,
+          quantity: product.quantity,
+        }));
       } catch (error) {
         console.error("Erro ao buscar produtos no MongoDB:", error);
         throw error;
@@ -78,7 +85,16 @@ module.exports = {
   async getById(id) {
     if (isVercel) {
       try {
-        return await Product.findById(id);
+        const product = await Product.findById(id);
+        return product
+          ? {
+              id: product._id, // Mapeia o ObjectId para "id"
+              title: product.title,
+              description: product.description,
+              price: product.price,
+              quantity: product.quantity,
+            }
+          : null;
       } catch (error) {
         console.error("Erro ao buscar produto por ID no MongoDB:", error);
         throw error;
@@ -93,7 +109,14 @@ module.exports = {
     if (isVercel) {
       const newProduct = new Product(product);
       try {
-        return await newProduct.save();
+        const savedProduct = await newProduct.save();
+        return {
+          id: savedProduct._id, // Mapeia o ObjectId para "id"
+          title: savedProduct.title,
+          description: savedProduct.description,
+          price: savedProduct.price,
+          quantity: savedProduct.quantity,
+        };
       } catch (error) {
         console.error("Erro ao salvar produto no MongoDB:", error);
         throw error;
@@ -112,9 +135,18 @@ module.exports = {
   async update(id, updatedProduct) {
     if (isVercel) {
       try {
-        return await Product.findByIdAndUpdate(id, updatedProduct, {
+        const updated = await Product.findByIdAndUpdate(id, updatedProduct, {
           new: true,
         });
+        return updated
+          ? {
+              id: updated._id, // Mapeia o ObjectId para "id"
+              title: updated.title,
+              description: updated.description,
+              price: updated.price,
+              quantity: updated.quantity,
+            }
+          : null;
       } catch (error) {
         console.error("Erro ao atualizar produto no MongoDB:", error);
         throw error;
