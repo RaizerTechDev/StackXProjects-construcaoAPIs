@@ -8,6 +8,7 @@ const productSchema = Joi.object({
 });
 
 module.exports = (req, res, next) => {
+  console.log("Dados recebidos para validação:", req.body);
   const { error } = productSchema.validate(req.body);
   if (error) {
     return res.status(400).json({ message: error.details[0].message });

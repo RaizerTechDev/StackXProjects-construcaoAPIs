@@ -1,9 +1,13 @@
 require("dotenv").config();
 const express = require("express");
 const path = require("path");
+const connectDB = require("./db"); // Importa a função de conexão do MongoDB
 const productRoutes = require("./routes/productRoutes");
 
 const app = express();
+
+// Conectar ao banco de dados
+connectDB();
 
 // Servir arquivos estáticos, como CSS e imagens, da pasta 'public'
 app.use(express.static(path.join(__dirname, "public")));
@@ -14,7 +18,7 @@ app.get("/", (req, res) => {
   res.status(200).send(`
     <html>
       <head>
-      <link rel="stylesheet" href="/css/styles.css">     
+        <link rel="stylesheet" href="/css/styles.css">     
         <title>Bem-vindo à API de Produtos!</title>
       </head>
       <body>
