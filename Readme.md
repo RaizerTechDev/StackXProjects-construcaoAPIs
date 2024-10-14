@@ -6,7 +6,7 @@
 
 <img src ="././src/public/assets//images/doc.png" alt="Descrição da Imagem" height="45"> 
 
-[ ( Clique aqui para saber mais da documentação) ](https://raizertechdev.vercel.app/)
+[ ( Clique aqui para saber mais da documentação) ](https://raizertech.vercel.app/)
 
 <br>
 
