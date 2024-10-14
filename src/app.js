@@ -23,7 +23,12 @@ app.get("/", (req, res) => {
       </head>
       <body>
         <h1>🌟 Bem-vindo à API de Produtos para Smartphones!</h1>
-        <h2>👉 Para acessar a documentação no Postman <br>clique aqui: <a href="${process.env.POSTMAN_DOC_LINK}" target="_blank"><span>Documentação da API</span></a></h2>       
+        <h2>👉 Para acessar a documentação no Postman <br>clique aqui: <a href="${process.env.POSTMAN_DOC_LINK}" target="_blank"><span>Documentação da API</span></a></h2>  
+       <p>💡 Esta documentação foi dividida entre:</p>
+<ul>
+    <li>🌐 <strong>API Local:</strong> Utiliza um arquivo local JSON como banco de dados.</li>
+    <li>🚀 <strong>Deploy no Vercel:</strong> Utiliza MongoDB como banco de dados.</li>
+</ul>
       </body>
     </html>
   `);

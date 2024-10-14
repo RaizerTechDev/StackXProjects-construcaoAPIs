@@ -7,7 +7,6 @@ body {
     color: #fff;
 }
 
-/* Estilos para telas menores (mobile e tablet) */
 h1 {
     margin-top: 100px; /* Ajuste para centralizar melhor em telas pequenas */
     margin-left: 50px; /* Centraliza o título */
@@ -20,7 +19,27 @@ h1 {
 h2 {
     margin-top: -40px;
     margin-left: 0; /* Centraliza o subtítulo */
-    font-size: 30px; /* Tamanho menor para telas pequenas */
+    font-size: 30px; 
+}
+
+p {
+    font-size: 28px; /* Tamanho do texto para o parágrafo */
+    color: #fefeff;
+    margin-top: 20px; /* Espaciamento superior */
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none; /* Remove os marcadores padrão */
+    padding: 0; /* Remove o preenchimento padrão */
+    font-size: 26px; /* Tamanho do texto da lista */
+    color: #fefeff;
+    margin-top: 20px; /* Espaçamento superior */
+}
+
+li {
+    margin: 10px 0; /* Espaçamento entre os itens da lista */
+    font-weight: bold;
 }
 
 
@@ -37,6 +56,16 @@ h2 {
         font-size: 38px;
         margin-left: -60px; 
         margin-top: 60px; 
+    }
+
+    p { 
+        margin-top: 120px;    
+        font-size: 38px;     
+    }
+
+    ul, li { 
+        font-size: 28px;
+        margin-top: 20px;
     }
 }
 
@@ -55,6 +84,14 @@ h2 {
         margin-top: 60px;
         margin-right: -50px;
        font-size: 38px; 
+    }
+
+  p {
+    font-size: 38px;
+  }
+
+  ul, li {       
+       font-size: 33px; 
     }
 }
 
@@ -77,6 +114,11 @@ span {
         margin-top: 30px;
         margin-right: -250px;
        font-size: 35px; 
+    }
+
+    ul, li {
+        margin-top: 10px;
+        font-size: 25px; 
     }
 }
 
