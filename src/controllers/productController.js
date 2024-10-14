@@ -72,7 +72,7 @@ module.exports = {
       const product = await productModel.getById(req.params.id);
       if (product) {
         await productModel.delete(req.params.id); // Aguarda a exclusão
-        res.json({ message: "Produto deletado com sucesso!" });
+        res.status(204).json();
       } else {
         res.status(404).json({ message: "Produto não encontrado." });
       }
