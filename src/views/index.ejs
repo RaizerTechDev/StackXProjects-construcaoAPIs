@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">      
+    <title>Bem-vindo à API de Produtos!</title>
+</head>
+<body>
+    <h1>🌟 Bem-vindo à API de Produtos para Smartphones!</h1>
+    <h2>👉 Para acessar a documentação no Postman <br>clique aqui: 
+        <a href="<%= process.env.POSTMAN_DOC_LINK %>" target="_blank">
+            <span>Documentação da API</span>
+        </a>
+    </h2>  
+    <p>💡 Esta documentação foi dividida entre:</p>
+    <ul>
+        <li>🌐 <strong>API Local:</strong> Utiliza um arquivo local JSON como banco de dados.</li>
+        <li>🚀 <strong>Deploy no Vercel:</strong> Utiliza MongoDB como banco de dados.</li>
+    </ul>
+
+    <!-- Início da seção de rodapé -->
+    <footer class="footer-contact">
+        <div class="footer__content">
+            <div class="footer__text">
+                <h2 class="footer__contact--info">MY<span> CONTACT</span></h2>
+                <p class="footer__description">I'd love to hear your feedback on my portfolio! Please fill in the form, and I’ll get back to you as soon as possible.</p>
+
+                <a class="top__page__footer" href="index.html">
+                    <h2>Top-Page<i class="fa-solid fa-house"></i></h2>
+                </a>
+                <a href="index.html">
+                    <img class="salut__footer" src="assets/images/saudacao.gif" alt="salut">
+                </a>
+            </div>
+
+            <section id="contact">
+                <form id="contactForm" autocomplete="off">
+                    <input class="form__contact" type="text" id="name" placeholder="NAME" name="name" required>
+                    <input class="form__contact" type="email" id="email" placeholder="EMAIL" name="email" required>
+                    <input class="form__contact" id="message" placeholder="MESSAGE" name="message" required>
+                    <button class="footer__submit--button" type="submit" data_form_button title="Click to send message">SEND MESSAGE</button>
+                </form>
+            </section>
+
+            <div>
+                <hr class="block__divider--three">
+            </div>
+
+            <div class="social-profile">
+                <h3>Redes Sociais</h3>
+                <ul>
+                    <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                    <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                    <li><a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+                </ul>
+            </div>         
+        </div>
+    </footer>
+
+</body>
+</html>

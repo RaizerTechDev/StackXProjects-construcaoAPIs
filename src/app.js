@@ -10,31 +10,21 @@ const app = express();
 connectDB();
 
 // Servir arquivos estáticos, como CSS e imagens, da pasta 'public'
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "../public"))); // Ajuste o caminho para que 'public' seja acessível
+
+// Middleware para lidar com JSON
 app.use(express.json());
 
-// Rota principal
+// Configurar EJS como motor de template
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views")); // Define a pasta de views
+
+// Rota principal para renderizar a página inicial
 app.get("/", (req, res) => {
-  res.status(200).send(`
-    <html>
-      <head>
-        <link rel="stylesheet" href="/css/styles.css">     
-        <title>Bem-vindo à API de Produtos!</title>
-      </head>
-      <body>
-        <h1>🌟 Bem-vindo à API de Produtos para Smartphones!</h1>
-        <h2>👉 Para acessar a documentação no Postman <br>clique aqui: <a href="${process.env.POSTMAN_DOC_LINK}" target="_blank"><span>Documentação da API</span></a></h2>  
-       <p>💡 Esta documentação foi dividida entre:</p>
-<ul>
-    <li>🌐 <strong>API Local:</strong> Utiliza um arquivo local JSON como banco de dados.</li>
-    <li>🚀 <strong>Deploy no Vercel:</strong> Utiliza MongoDB como banco de dados.</li>
-</ul>
-      </body>
-    </html>
-  `);
+  res.render("index"); // Renderiza o arquivo index.ejs sem o caminho
 });
 
-// Rotas
+// Rotas da API de produtos
 app.use("/api/products", productRoutes);
 
 // Porta
@@ -44,3 +34,4 @@ app.listen(PORT, () => {
 });
 
 module.exports = app;
+
