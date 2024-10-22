@@ -1,0 +1,231 @@
+body {   
+    background-image: url('/assets/images/api-fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    font-family: "Montserrat", sans-serif; /* Define a família de fontes */
+    text-align: center;
+    color: #fff;
+}
+
+h1 {
+    margin-top: 100px; /* Ajuste para centralizar melhor em telas pequenas */
+    margin-left:-5px; /* Centraliza o título */
+    color: #5454cd;
+    font-size: 42px; /* Tamanho menor para telas pequenas */
+    font-weight: bold;
+    font-style: italic;  
+}
+
+h2 {
+    margin-top: 40px;
+    margin-left: -5px; /* Centraliza o subtítulo */
+    font-size: 30px; 
+}
+
+p {
+    font-size: 28px; /* Tamanho do texto para o parágrafo */  
+    margin-top: 40px; /* Espaciamento superior */
+    margin-left: -15px; /* Centraliza o subtítulo */
+    font-weight: bold;
+    color: rgb(253, 207, 120);
+}
+
+ul {
+    list-style-type: none; /* Remove os marcadores padrão */
+    padding: 0; /* Remove o preenchimento padrão */   
+    color: #fefeff;
+    margin-top: -15px; /* Espaçamento superior */
+}
+
+li {
+    margin: 10px 0; /* Espaçamento entre os itens da lista */    
+    font-size: 22px; /* Tamanho do texto para o parágrafo */
+    font-weight: bold;
+}
+
+
+/* Footer Styles */
+.footer-contact {
+    background: url("/assets/images/fundo-redes-sociais.jpg") no-repeat; 
+    min-height: 200px; 
+    height: 100%; 
+    padding: 2em 0; /* Reduz o padding (espaçamento interno) para diminuir a altura do rodapé */
+    padding-bottom: 20px; /* Padding inferior ajustado */
+    border-top: 3px solid #3381f3; /* Borda superior mais fina */
+    border-bottom: 3px solid #3381f3; /* Borda inferior mais fina */
+  }
+  
+  .footer__content {
+    width: 100%; 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 8rem; /* Reduz o espaço entre as colunas */
+  }
+  
+  .footer__text {
+    margin-top: 2.55rem; /* Reduz a margem superior */
+  }
+  
+  .footer__contact--info {
+    margin-top: 3rem; 
+    margin-left: -10px;
+    font-size: 48px;
+    font-weight: bold; 
+    color: rgb(4, 4, 4); 
+  }
+  
+  .footer__contact--info span {
+    border-bottom: 0.25rem solid #ffff;   
+    font-weight: bold;   
+    color: rgb(26, 68, 26); 
+  }
+  
+  .footer__description {
+    margin-top: 3rem; 
+    margin-left: 180px; 
+    margin-bottom: 3rem;
+    font-size: 28px;
+    font-weight: bold; 
+    color: rgb(4, 4, 4); 
+  }
+  
+  .top__page__footer h2 {
+    width: 80%; /* Define a largura como 80% */
+    margin-top: 10rem; /* Adiciona margem superior de 10 vezes a altura da fonte atual */
+    margin-left: 18rem; /* Adiciona margem esquerda de 18 pixels */
+    color: #095f04; /* Define a cor do texto como #095f04 */
+    font-weight: bold; /* Define a espessura da fonte como negrito */
+    font-size: 2.5rem; /* Define o tamanho da fonte como 2.5 vezes a altura da fonte atual */
+  }
+  
+  .salut__footer {
+    width: 15%; /* Define a largura como 18% */
+    margin-top: -20px;
+    margin-left: 16rem; /* Adiciona margem esquerda de 16 pixels */
+  }
+  
+  .form__contact {
+    font-weight: 600; /* Define a espessura da fonte como 600 (semi-negrito) */
+    font-size: 1.1rem; /* Define o tamanho da fonte como 1.1 vezes a altura da fonte atual */
+    text-transform: uppercase; /* Converte o texto para maiúsculas */
+    color: hsl(0, 0%, 8%); /* Define a cor do texto como hsl(0, 0%, 8%) */
+    padding: 0.7rem 1.6rem 1.4rem 2.4rem; /* Adiciona preenchimento com os valores especificados */
+    border-radius: 2px; /* Define o raio da borda como 2 pixels */
+    background-color: transparent; /* Define o fundo como transparente */
+    border: none; /* Remove a borda */
+    border-bottom: 2px solid hsl(0, 0%, 13%); /* Adiciona uma borda inferior de 2 pixels sólidos na cor hsl(0, 0%, 13%) */
+    width: 80%; /* Define a largura como 80% */
+    display: block; /* Define o elemento como bloco */
+    transition: all 300ms ease-in-out; /* Adiciona uma transição de 300 milissegundos com efeito de entrada e saída para todas as propriedades */
+    -webkit-transition: all 300ms ease-in-out; /* Adiciona uma transição de 300 milissegundos com efeito de entrada e saída para todas as propriedades (para navegadores WebKit) */
+    margin-top: 5rem; /* Adiciona margem superior de 5 vezes a altura da fonte atual */
+    margin-left: 0; /* Remove a margem esquerda */
+    outline: none; /* Remove o contorno ao receber foco */
+    /*Remove a borda do input*/
+  }
+  
+  .form__contact::placeholder {
+    color: #095f04; /* Define a cor do texto de espaço reservado como #095f04 */
+  }
+  
+  .footer__submit--button {
+    width: 80%; /* Define a largura como 80% */
+    font-size: 1.1rem; /* Define o tamanho da fonte como 1.1 vezes a altura da fonte atual */
+    font-weight: bold; /* Define a espessura da fonte como negrito */
+    color: hsl(0, 0%, 13%); /* Define a cor do texto como hsl(0, 0%, 13%) */
+    border: none; /* Remove a borda */
+    background-color: transparent; /* Define o fundo como transparente */
+    cursor: pointer; /* Altera o cursor para indicar um link */
+    float: inline-end; /* Move o elemento para a extremidade inline oposta */
+    text-decoration: underline 5px solid #3b3; /* Adiciona uma linha de sublinhado de 5 pixels sólidos na cor #3b3 */
+    margin-top: 2rem; /* Adiciona margem superior de 2 vezes a altura da fonte atual */
+    margin-bottom: 5rem; /* Adiciona margem inferior de 5 vezes a altura da fonte atual */
+    letter-spacing: 0.229rem; /* Adiciona espaçamento entre caracteres de 0.229 vezes a altura da fonte atual */
+    line-height: 2.6rem; /* Define a altura da linha como 2.6 vezes a altura da fonte atual */
+    padding-bottom: 0.01rem; /* Adiciona preenchimento inferior de 0.01 vezes a altura da fonte atual */
+  }
+  
+  .footer__submit--button:hover {
+    color: #3381f3; /* Altera a cor do texto ao passar o mouse para #3381f3 */
+  }
+  
+  .footer__button--animation {
+    width: 60px; /* Define a largura como 60 pixels */
+  }
+  
+  .social-profile {
+    display: flex; /* Define o modelo de layout como flexível */
+    align-items: center; /* Alinha os itens ao longo do eixo transversal (vertical) ao centro */
+    justify-content: space-around; /* Distribui os elementos igualmente ao longo do eixo principal (horizontalmente) */
+    flex-wrap: wrap; /* Permite que os elementos sejam envolvidos em várias linhas */
+    margin-bottom: -1rem; /* Adiciona margem inferior de -1 vezes a altura da fonte atual */
+    margin-left: -1000px; /* Adiciona margem esquerda de -1000 pixels */
+  }
+  
+  .social-profile nav {
+    display: flex; /* Define o modelo de layout como flexível */
+    list-style-type: none; /* Remove os marcadores de lista */
+    margin-top: -70px; 
+    margin-bottom: 2rem; /* Adiciona margem inferior de 2 vezes a altura da fonte atual */
+    color: rgb(26, 68, 26); /* Define a cor do texto como RGB(26, 68, 26) */
+    margin-left: 170px; /* Adiciona margem esquerda de 170 pixels */
+  }
+  
+  .social-profile nav a {
+    width: 2.4rem; /* Define a largura como 2.4 pixels */
+    height: 2.4rem; /* Define a altura como 2.4 pixels */
+  }
+  
+  .profile-name__title {
+    color: #202020; /* Define a cor do texto como #202020 */
+    font-weight: bold; /* Define a espessura da fonte como negrito */
+    font-size: 1.8rem; /* Define o tamanho da fonte como 1.8 vezes a altura da fonte atual */
+    margin-left: 330px; /* Adiciona margem esquerda de 330 pixels */
+    margin-top: -60px;
+  }
+  
+  .profile-name__subtitle {
+    border-bottom: 0.25rem solid #ffff; /* Adiciona uma borda inferior de 0.25 vezes a altura da fonte atual na cor #ffff */
+    color: rgb(26, 68, 26); /* Define a cor do texto como RGB(26, 68, 26) */
+    font-weight: bold; /* Define a espessura da fonte como negrito */
+    font-size: 1.8rem; /* Define o tamanho da fonte como 1.8 vezes a altura da fonte atual */
+  }
+  
+  a.git-profile,
+  a.linkedln-profile,
+  a.whatssap-profile,
+  a.mail-profile,
+  a.linkedln-profile {
+    padding: 1rem; /* Adiciona preenchimento de 1 vez a altura da fonte atual */
+  }
+  
+  .git-profile,
+  .linkedln-profile,
+  .mail-profile,
+  .whatssap-profile {
+    font-size: 1.5rem; /* Define o tamanho da fonte como 1.5 vezes a altura da fonte atual */
+  }
+  
+  .icons a {
+    display: flex; /* Define o modelo de layout como flexível */
+    align-items: center; /* Alinha os itens ao longo do eixo transversal (vertical) ao centro */
+    justify-content: center; /* Alinha os itens ao longo do eixo principal (horizontalmente) ao centro */
+    text-decoration: none; /* Remove a decoração de texto */
+    color: rgb(26, 68, 26); /* Define a cor do texto como RGB(26, 68, 26) */
+  }
+  
+  .icons a:hover {
+    color: #1fc1ea; /* Altera a cor do texto ao passar o mouse para #8c8c8c */
+  }
+  
+  /* Estilo hr */
+  .block__divider--three {
+    width: 135%; /* Define a largura como 135% */
+    margin-top: -70px;
+    border-bottom: 2px solid hsl(0, 0%, 100%); /* Adiciona uma borda inferior de 1 pixel sólido na cor hsl(0, 0%, 13%) */
+   
+    margin-left: 620px; /* Adiciona margem esquerda de 420 pixels */
+  }
+
+  
+  

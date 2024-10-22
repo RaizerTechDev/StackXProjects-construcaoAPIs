@@ -1,0 +1,482 @@
+@media screen and (max-width: 579px) {
+    .footer__content {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        margin-top: -2rem;
+      }
+    
+      /* Estilos para informações de contato no rodapé */
+      .footer__contact--info {
+        margin-top: 2rem;
+        margin-left: 0rem;
+        text-align: center;
+        font-size: 2.3rem;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .footer__description {
+        margin-top: 3rem; 
+        margin-left: 10px; 
+        margin-bottom: 3rem;
+        padding-right: 0.5rem; /* Preenchimento à direita de 2.5rem */
+        font-size: 1.2rem;
+        font-weight: bold; /* Define a espessura da fonte como negrito */
+      } 
+    
+      /* Estilos para o título h2 */
+      .top__page__footer h2 {
+        width: 100%;
+        margin-top: 80px;
+        margin-left: 0;
+        text-align: center;
+        font-size: 2.3rem;
+      }
+    
+      .salut__footer {
+        width: 15%;
+        margin: 1rem auto;
+        margin-top: 30px;
+        display: block;
+      }
+    
+      .footer-text {
+        margin-top: 1.5rem;
+      }
+    
+      .social-profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: none;
+        font-weight: bold;
+        margin-left: -20px;
+        margin-top: 20px;
+      }
+    
+      .social-profile nav {
+        margin-top: 0.5rem;
+        margin-left: 4px;
+      }
+    
+      .social-profile div {
+        margin-top: 1.5rem;      
+      }
+    
+      .profile-name__title {
+        margin-top: -50px;
+        margin-left: 4px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+    
+      .profile-name__subtitle {
+        border-bottom: none;
+        font-size: 24px;
+        font-weight: bold;
+        color: rgb(26, 68, 26);        
+      }
+    
+      #contactForm input {
+        width: 100%;
+        font-weight: bold;
+        margin-left: -15px;
+        font-size: 1.0rem;
+      }
+    
+      .footer__submit--button {
+        font-size: 1.2rem;
+        font-weight: bold;
+      }
+    
+      .footer__submit--button:hover {
+        color: #3381f3;
+      }
+    
+      .footer__button--animation {
+        width: 60px;
+      }
+    
+      .block__divider--three {
+        width: 90%;
+        margin: 0 auto;
+        border-bottom: 1px solid hsl(0, 0%, 13%);
+      }
+    
+      .icons a {
+        margin-top: -70px;
+        font-size: 21px;
+        color: rgb(26, 68, 26);
+        
+      }
+    
+      .icons a:hover {
+        color: #8c8c8c;
+      }   
+
+}
+
+/* Media Query para telas grandes (tablet e ipad Mini) */
+@media screen and (min-width: 580px) and (max-width: 768px) {
+  h1, h2 {
+    width: 100%; 
+    margin-top: 100px;
+    margin-left: 5px;
+    text-align: center; /* Centraliza o texto */
+}
+
+h1 {
+    font-size: 48px; /* Ajusta o tamanho da fonte do título */
+    font-weight: bold; /* Deixa o título em negrito */
+    padding: 10px 0; /* Adiciona espaçamento no topo e embaixo */
+}
+
+h2 {
+    font-size: 32px; /* Ajusta o tamanho da fonte do subtítulo */
+    margin-top: 10px; /* Adiciona espaçamento superior */
+    margin-left: -25px;
+}
+
+h2 a {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: blue; /* Cor do link */
+}
+
+h2 a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+
+    span {
+        color: rgb(253, 207, 120);
+        cursor: pointer;
+    }
+    
+
+    p { 
+        margin-top: 120px;  
+        margin-left: -20px;  
+        font-size: 38px;     
+    }
+
+    ul, li { 
+        font-size: 24px;
+        margin-top: 20px;
+        margin-left: 5px;
+        text-align: center;
+    }
+
+    
+  /* Estilos para o conteúdo do rodapé */
+  .footer-contact {
+    background-color: #f1f1f1; /* Cor de fundo do footer */
+    min-height: 200px; /* Altura mínima para o conteúdo do rodapé */
+    height: 100%;
+    display: flex; /* Flexbox para centralizar o conteúdo */
+    flex-direction: column; /* Alinha o conteúdo verticalmente */
+    justify-content: space-between; /* Espaçamento adequado entre os elementos */
+    padding: 20px;
+}
+.footer__content {
+  width: 100%; /* O conteúdo ocupa toda a largura do footer */
+  max-width: 1200px; /* Define uma largura máxima para o conteúdo */
+  margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+}
+
+/* Centraliza o texto */
+.footer__text {
+  text-align: center;
+}
+
+.footer__contact--info {
+  font-size: 42px;
+  margin-left: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.footer__description {
+  font-size: 24px;
+  margin-left: 30px;
+  text-align: center;
+  font-weight: bold;  
+}
+.top__page__footer h2 {   
+  margin-top: 80px;
+  margin-left: 25px;
+  text-align: center;
+}
+
+.salut__footer {
+  width: 15%; 
+  margin-top: -20px;
+  margin-left: 0px; /* Adiciona margem esquerda de 16 pixels */
+}
+.form__contact {
+  width: 100%; /* Campos do formulário ocupam toda a largura disponível */
+  margin-top: 120px;
+  margin-left: -48px;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 1.1rem;
+}
+
+.footer__submit--button {
+  margin-right: 80px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.footer__submit--button:hover {
+  color: #3381f3;
+}
+
+.footer__button--animation {
+  width: 60px;
+}
+
+.block__divider--three {
+  width: 220%;
+  margin: 0 auto;
+  margin-left: 70px;
+  border-bottom: 1px solid hsl(0, 100%, 100%);
+}
+
+.social-profile {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.profile-name__title {
+  margin-top: -35px;
+  margin-right: 310px;  
+  font-weight: bold;
+}
+
+.profile-name__subtitle {
+  font-size: 1.2em;
+}
+
+.icons {  
+  display: flex;
+  justify-content: center;
+  gap: 15px;  
+}
+
+.icons a {
+  margin-top: 42px;
+  margin-left: -20px;
+  font-size: 1.5em;
+  color: #333;
+ }
+} 
+
+/* Estilos para dispositivos entre 769px e 1200px de largura de tela(ipad maiores) */
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+
+  h1 {
+    font-size: 45px;
+    margin-left: -20px;
+  }
+
+  span {
+    color: rgb(253, 207, 120);
+    cursor: pointer;
+  }
+
+  p {
+    margin-top: 80px;
+    font-size: 35px;
+  }
+
+  ul, li { 
+    font-size: 24px;    
+}
+  
+  /* Estilos para o conteúdo do rodapé */
+  .footer__content {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin-top: -2rem;
+  }
+
+  /* Estilos para informações de contato no rodapé */
+  .footer__contact--info {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    text-align: center;
+    font-size: 3rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__description {
+    margin-top: 3rem; 
+    margin-left: 40px; 
+    margin-bottom: 3rem;
+    font-size: 28px;
+    font-weight: bold; /* Define a espessura da fonte como negrito */
+  } 
+
+  /* Estilos para o título h2 */
+  .top__page__footer h2 {
+    width: 100%;
+    margin-top: 80px;
+    margin-left: 0;
+    text-align: center;
+    font-size: 2.3rem;
+  }
+
+  .salut__footer {
+    width: 12%;
+    margin: 1rem auto;
+    display: block;
+  }
+
+  .footer-text {
+    margin-top: 1.5rem;
+  }
+
+  .social-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: none;
+    font-weight: bold;
+    margin-left: -20px;
+    margin-top: -20px;
+  }
+
+  .social-profile nav {
+    margin-top: 0.5rem;
+    margin-left: 400px;
+  }
+
+  .social-profile div {
+    margin-top: 1.5rem;
+  }
+
+  .profile-name__title {
+    margin-top: 10px;      
+    margin-left: -400px;
+  }
+
+  .profile-name__subtitle {
+    border-bottom: 0.25rem solid #ffff;
+    color: rgb(26, 68, 26);
+    font-weight: bold;
+  }
+
+  #contactForm input {
+    width: 100%;
+    font-weight: bold;
+    margin-left: 0;
+    font-size: 1.5rem;
+  }
+
+  .footer__submit--button {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .footer__submit--button:hover {
+    color: #3381f3;
+  }
+
+  .footer__button--animation {
+    width: 60px;
+  }
+
+  .block__divider--three {
+    width: 70%;
+    margin: 0 auto;
+    border-bottom: 1px solid hsl(0, 0%, 13%);
+  }
+
+  .icons a {
+    color: rgb(26, 68, 26);
+    margin-top: -105px;
+    margin-right: -30px;
+    font-size: 1.5em;   
+  }
+
+  .icons a:hover {
+    color: #8c8c8c;
+  }
+}
+
+/* Media Query para telas médias (Mackbook) */
+@media (min-width: 1280px) and (max-width: 1440px) {
+  h1 {
+    width: 100%; 
+    margin-top: 120px;
+    margin-left: 20px;
+    text-align: center; /* Centraliza o texto */
+ }
+ span {
+  color: rgb(253, 207, 120);
+  cursor: pointer;
+}
+
+p {
+  margin-top: 80px;
+}
+
+.profile-name__title {  
+  margin-top: -70px; 
+  margin-left: 400px;
+}
+
+.social-profile nav {
+  margin-left: 0px;
+}
+
+.icons a {
+  margin-left: -20px;
+} 
+
+ .block__divider--three { 
+   margin-left: 300px;
+ }
+}
+
+/* Media Query para telas maiores (desktop) */
+@media (min-width: 1920px)  {
+    h1 {
+        width: 100%; 
+        margin-top: 120px; 
+        margin-left: 0px; 
+        text-align: center;
+        color: #7db3f6;
+        font-size: 48px;
+        font-weight: bold;
+        font-style: italic;        
+    }
+
+    h2 {        
+        margin-top: 30px;
+        margin-left: 180px; 
+        font-size: 30px; 
+    }
+
+    p {
+        margin-top: 60px;
+    }
+
+   li {
+        margin-top: -10px;
+        font-size: 22px; 
+    }
+
+span {
+    color: rgb(253, 207, 120);
+    cursor: pointer;
+ }
+
+ .block__divider--three { 
+  margin-left: 540px;
+}
+}
+
