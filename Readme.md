@@ -4,7 +4,7 @@
 
  <div align="center">
 
-<img src ="././src/public/assets//images/doc.png" alt="Descrição da Imagem" height="45"> 
+<img src ="././public/assets/images/doc.png" alt="Descrição da Imagem" height="45"> 
 
 [ ( Clique aqui para saber mais da documentação) ](https://raizertech.vercel.app/)
 
@@ -14,7 +14,7 @@
   
 <img src= "https://media.giphy.com/media/3zSF3Gnr7cxMbi6WoP/giphy.gif" align="center" height="55" width="55"> [Demonstração-Postman] <img src= "https://media.giphy.com/media/E5DzZsofmgxc9wjbhX/giphy.gif" align="center" height="35" width="35">
 
-<img height="480em" src="././src//public/assets/images/Apresentacao-API-Smartphones.png"  align="center"> 
+<img height="480em" src="././public/assets/images/Apresentacao-API-Smartphones.png"  align="center"> 
 
 <br>
 
