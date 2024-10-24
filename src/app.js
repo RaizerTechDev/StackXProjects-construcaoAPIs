@@ -3,8 +3,15 @@ const express = require("express");
 const path = require("path");
 const connectDB = require("./db"); // Importa a função de conexão do MongoDB
 const productRoutes = require("./routes/productRoutes");
+const logger = require("./utils/logger");
 
 const app = express();
+
+// Middleware para lidar com erros globais
+app.use((err, req, res, next) => {
+  logger.error(err.stack); // Logar o erro
+  res.status(500).send("Algo deu errado!"); // Responder com erro genérico
+});
 
 // Conectar ao banco de dados
 connectDB();
@@ -27,6 +34,11 @@ app.get("/", (req, res) => {
 // Rotas da API de produtos
 app.use("/api/products", productRoutes);
 
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send("Algo deu errado!"); // Resposta genérica em caso de erro
+});
+
 // Porta
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
@@ -34,4 +46,3 @@ app.listen(PORT, () => {
 });
 
 module.exports = app;
-
