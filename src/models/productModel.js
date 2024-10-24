@@ -12,18 +12,18 @@ const dataFilePath = isVercel
 
 // Conexão com o MongoDB (somente em produção)
 if (isVercel) {
+// Conexão com o MongoDB (somente em produção)
+if (isVercel) {
   mongoose
-  .connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useCreateIndex: true,
-    serverSelectionTimeoutMS: 5000,
-  })
-  .then(() => console.log("Conectado ao MongoDB"))
-  .catch((error) => {
-    console.error("Erro ao conectar ao MongoDB:", error);
-    process.exit(1);
-  });
+    .connect(process.env.MONGODB_URI, {
+      serverSelectionTimeoutMS: 5000, // Mantendo apenas o timeout
+    })
+    .then(() => console.log("Conectado ao MongoDB"))
+    .catch((error) => {
+      console.error("Erro ao conectar ao MongoDB:", error);
+      process.exit(1);
+    });
+ }
 }
 
 // Define o schema para o MongoDB
