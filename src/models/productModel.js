@@ -12,8 +12,6 @@ const dataFilePath = isVercel
 
 // Conexão com o MongoDB (somente em produção)
 if (isVercel) {
-// Conexão com o MongoDB (somente em produção)
-if (isVercel) {
   mongoose
     .connect(process.env.MONGODB_URI, {
       serverSelectionTimeoutMS: 5000, // Mantendo apenas o timeout
@@ -24,7 +22,6 @@ if (isVercel) {
       process.exit(1);
     });
  }
-}
 
 // Define o schema para o MongoDB
 const productSchema = new mongoose.Schema({
