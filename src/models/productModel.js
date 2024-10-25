@@ -12,6 +12,8 @@ const dataFilePath = isVercel
 
 // Conexão com o MongoDB (somente em produção)
 if (isVercel) {
+  // Log para verificar se a URI está correta no ambiente do Vercel
+console.log("MongoDB URI:", process.env.MONGODB_URI); 
   mongoose
     .connect(process.env.MONGODB_URI, {
       serverSelectionTimeoutMS: 5000, 
