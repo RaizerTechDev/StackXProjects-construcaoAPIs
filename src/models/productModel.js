@@ -16,11 +16,12 @@ if (isVercel) {
 console.log("MongoDB URI:", process.env.MONGODB_URI); 
   mongoose
     .connect(process.env.MONGODB_URI, {
-      serverSelectionTimeoutMS: 5000, 
+      serverSelectionTimeoutMS: 10000, 
     })
     .then(() => console.log("Conectado ao MongoDB"))
     .catch((error) => {
-      console.error("Erro ao conectar ao MongoDB:", error);
+      console.error("Erro ao conectar ao MongoDB:", error.message);
+      console.error("Detalhes do erro:", error);
       process.exit(1);
     });
  }

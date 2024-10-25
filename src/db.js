@@ -1,19 +1,22 @@
+// db.js
 const mongoose = require("mongoose");
 
-const connectDB = async () => {
-    try {
-        await mongoose.connect(process.env.MONGODB_URI, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        });
-        console.log("MongoDB conectado!");
-    } catch (error) {
-        console.error("Erro na conexão com o MongoDB:", error.message);
-        process.exit(1);
-    }
-};
+async function connectWithRetry() {
+  try {
+    console.log("Tentando conectar ao MongoDB...");
+    await mongoose.connect(process.env.MONGODB_URI, {
+      serverSelectionTimeoutMS: 10000, // Timeout aumentado
+    });
+    console.log("Conectado ao MongoDB");
+  } catch (error) {
+    console.error("Erro ao conectar ao MongoDB:", error.message);
+    console.error("Tentando novamente em 5 segundos...");
+    setTimeout(connectWithRetry, 5000); // Tenta novamente após 5 segundos
+  }
+}
 
-module.exports = connectDB;
+module.exports = connectWithRetry;
+
 
 
 
