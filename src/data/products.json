@@ -14,10 +14,10 @@
     "id": 2
   },
   {
-    "title": "iPhone 16 Pro",
-    "description": "O iPhone 16 Pro apresenta um design elegante com bordas retas e está equipado com o poderoso chip A18 Pro, proporcionando desempenho excepcional.",
-    "quantity": 10,
-    "price": 7.999,
-    "id": 4
+    "title": "Samsung Galaxy S23",
+    "description": "Samsung Galaxy S23 com 256GB e câmera de 108MP para fotos incríveis.",
+    "quantity": 15,
+    "price": 5.999,
+    "id": 5
   }
 ]
