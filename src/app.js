@@ -17,7 +17,7 @@ app.use((err, req, res, next) => {
 connectDB();
 
 // Servir arquivos estáticos, como CSS e imagens, da pasta 'public'
-app.use(express.static(path.join(__dirname, "../public"))); // Ajuste o caminho para que 'public' seja acessível
+app.use(express.static(path.join(__dirname, "../public")));
 
 // Middleware para lidar com JSON
 app.use(express.json());
@@ -34,12 +34,6 @@ app.get("/", (req, res) => {
 // Rotas da API de produtos
 app.use("/api/products", productRoutes);
 
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).send("Algo deu errado!"); // Resposta genérica em caso de erro
-});
-
-// Porta
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Servidor rodando na porta ${PORT}`);
