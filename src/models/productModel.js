@@ -10,22 +10,6 @@ const dataFilePath = isVercel
   ? path.join(__dirname, "../tmp/products.json")
   : path.join(__dirname, "../data/products.json");
 
-// Conexão com o MongoDB (somente em produção)
-if (isVercel) {
-  // Log para verificar se a URI está correta no ambiente do Vercel
-console.log("MongoDB URI:", process.env.MONGODB_URI); 
-  mongoose
-    .connect(process.env.MONGODB_URI, {
-      serverSelectionTimeoutMS: 10000, 
-    })
-    .then(() => console.log("Conectado ao MongoDB"))
-    .catch((error) => {
-      console.error("Erro ao conectar ao MongoDB:", error.message);
-      console.error("Detalhes do erro:", error);
-      process.exit(1);
-    });
- }
-
 // Define o schema para o MongoDB
 const productSchema = new mongoose.Schema({
   title: { type: String, required: true },

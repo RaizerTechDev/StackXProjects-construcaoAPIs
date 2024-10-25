@@ -1,7 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const path = require("path");
-const connectDB = require("./db");
+const connectWithRetry = require("./db");
 const productRoutes = require("./routes/productRoutes");
 const logger = require("./utils/logger");
 
@@ -14,7 +14,7 @@ app.use((err, req, res, next) => {
 });
 
 // Conectar ao banco de dados
-connectDB();
+connectWithRetry();
 
 // Servir arquivos estáticos, como CSS e imagens, da pasta 'public'
 app.use(express.static(path.join(__dirname, "../public")));
