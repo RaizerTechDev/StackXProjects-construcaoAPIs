@@ -37,7 +37,7 @@ cd nome-do-repositorio
 ```
 - Instale as dependências:
 ```
-npm install express fetch filesystem joi dotenv
+npm install express fetch filesystem joi dotenv winston
 ```
 - OBS: Foi instalado a Biblioteca Joi para validação de dados.
 <br>

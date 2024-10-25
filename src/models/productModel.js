@@ -14,7 +14,7 @@ const dataFilePath = isVercel
 if (isVercel) {
   mongoose
     .connect(process.env.MONGODB_URI, {
-      serverSelectionTimeoutMS: 5000, // Mantendo apenas o timeout
+      serverSelectionTimeoutMS: 5000, 
     })
     .then(() => console.log("Conectado ao MongoDB"))
     .catch((error) => {

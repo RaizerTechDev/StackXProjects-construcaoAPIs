@@ -1,5 +1,5 @@
 const productModel = require("../models/productModel");
-const logger = require('../utils/logger'); 
+const logger = require("../utils/logger");
 
 module.exports = {
   async getAllProducts(req, res) {
@@ -22,7 +22,7 @@ module.exports = {
         res.status(404).json({ message: "Produto não encontrado." });
       }
     } catch (error) {
-      console.error("Erro ao buscar produto:", error); // Log do erro
+      logger.error("Erro ao buscar produto:", error); // Log do erro
       res
         .status(500)
         .json({ message: "Erro ao buscar produto: " + error.message }); // Resposta de erro
@@ -32,11 +32,11 @@ module.exports = {
   async createProduct(req, res) {
     console.log("Dados recebidos:", req.body); // Log dos dados recebidos
     try {
-      const newProduct = await productModel.create(req.body); 
-       console.log("Produto criado com sucesso:", newProduct);// Aguarda a criação do novo produto
+      const newProduct = await productModel.create(req.body);
+      console.log("Produto criado com sucesso:", newProduct); // Aguarda a criação do novo produto
       res.status(201).json(newProduct); // Retorna o produto criado
     } catch (error) {
-      console.error("Erro ao criar produto:", error); // Log do erro
+      logger.error("Erro ao criar produto:", error); // Log do erro
       res
         .status(500)
         .json({ message: "Erro ao criar produto: " + error.message }); // Resposta de erro
@@ -60,7 +60,7 @@ module.exports = {
         res.status(404).json({ message: "Produto não encontrado." });
       }
     } catch (error) {
-      console.error("Erro ao atualizar produto:", error);
+      logger.error("Erro ao atualizar produto:", error);
       res
         .status(500)
         .json({ message: "Erro ao atualizar produto: " + error.message });
@@ -78,7 +78,7 @@ module.exports = {
         res.status(404).json({ message: "Produto não encontrado." });
       }
     } catch (error) {
-      console.error("Erro ao deletar produto:", error);
+      logger.error("Erro ao deletar produto:", error);
       res
         .status(500)
         .json({ message: "Erro ao deletar produto: " + error.message });
