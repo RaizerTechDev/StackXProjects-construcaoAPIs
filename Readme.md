@@ -60,24 +60,24 @@ npm run nodemon
 ✨ Esta ``API`` permite experimentar as seguintes ações:
 
 ```
+➕ Criar Produtos: Use `POST/api/products`em (json) para aicionar novos celulares ao catálogo 📲
 
-➕ Criar Produtos: Use `POST/api/products`em (json) para aicionar novos celulares ao catálogo, especificando título, descrição, quantidade e preço 📲
-Exemplo de itens
+Exemplo de produtos:
 {
     "title": "iPhone 16 Pro",
-    "description": "O iPhone 16 Pro apresenta um design elegante com bordas retas e está equipado com o poderoso chip A18 Pro, proporcionando desempenho excepcional.",
+    "description": "O iPhone 16 Pro apresenta um design elegante com bordas retas e está equipado com o poderoso chip A18 Pro,
+    proporcionando desempenho excepcional.",
     "quantity": 10,
     "price": 7.999,
 }
 
 🔍 Listar Produtos: Faça uma requisição (`GET/api/products`) para consultar o catálogo completo.
 
-😃 Listar Produtos: Use `GET /api/products/:id` para uma requisição  para consultar um produto específico, selecionando-o pelo seu ID.
+😃 Listar Produtos: Use `GET /api/products/:id` para uma requisição  para consultar um produto específico.
 
 ✏️ Atualizar Produtos: Use `PUT /api/products/:id``modificando informações dos produtos existentes com uma requisição 📈
 
 🗑️ Excluir Produtos: Use `DELETE /api/products/:id` e remova produtos do catálogo, mantendo-o sempre atualizado ❌
-
 ```    
 
 ***
