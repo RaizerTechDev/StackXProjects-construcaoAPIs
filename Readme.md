@@ -1,5 +1,14 @@
 # API - Gerenciamento De Produtos Smartphones
 
+<div align="left">
+
+## Índice
+- [Objetivo](#-objetivo)
+- [Instalação](#instalação-com-bash)
+- [Instruções](#instruções-para-realizar-operações-de-crud-com-produtos)
+- [Observações](#observações)
+
+## 🌟 Objetivo:
 #### 🌟 Bem-vindo à API de Produtos. Esta API permite executar operações CRUD (Criar, Ler, Atualizar e Deletar) em uma lista de produtos. Para facilitar a integração e os testes, disponibilizamos uma documentação interativa no Postman, onde é possível explorar todas as funcionalidades, incluindo rotas e exemplos de requisições.
 
  <div align="center">
@@ -21,11 +30,6 @@
 ***
 <div align="left">
 
-## Índice
-- Instalação
-- Instruções
-- Observações
-
 ## Instalação com bash
 - Clone o repositório:
 ```
@@ -40,12 +44,12 @@ cd nome-do-repositorio
 npm install express fetch filesystem joi dotenv winston
 ```
 - OBS: Foi instalado a Biblioteca Joi para validação de dados.
+
 <br>
 
-- Instale biomejs: Pois é uma ferramenta moderna de desenvolvimento que combina funcionalidades de linting, formatação de código e compilação em um único pacote.
-
+- Instalando pacotes para formatação
 ```
-npm install --save-dev --save-exact @biomejs/biome
+npm install --save-dev eslint eslint-config-prettier eslint-plugin-prettier prettier
 ```
 
 <br>
