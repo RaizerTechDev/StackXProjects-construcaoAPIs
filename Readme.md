@@ -42,6 +42,14 @@ npm install express fetch filesystem joi dotenv winston
 - OBS: Foi instalado a Biblioteca Joi para validação de dados.
 <br>
 
+- Instale biomejs: Pois é uma ferramenta moderna de desenvolvimento que combina funcionalidades de linting, formatação de código e compilação em um único pacote.
+
+```
+npm install --save-dev --save-exact @biomejs/biome
+```
+
+<br>
+
 - Inicie o servidor:
 ```
 npm run nodemon

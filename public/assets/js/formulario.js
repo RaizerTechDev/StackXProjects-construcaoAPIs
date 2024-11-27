@@ -1,16 +1,16 @@
 document
-  .getElementById("contactForm")
-  .addEventListener("submit", function (event) {
+  .getElementById('contactForm')
+  .addEventListener('submit', function (event) {
     // Impedir o envio padrão do formulário
     event.preventDefault();
 
     // Obter os valores dos campos do formulário
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
 
     // Seleciona o botão usando o seletor correto
-    const buttonForm = document.querySelector("[data_form_button]");
+    const buttonForm = document.querySelector('[data_form_button]');
 
     // Função que adiciona a imagem de carregamento ao botão
     const addLoad = () => {
@@ -36,10 +36,10 @@ document
       buttonForm.innerHTML = renderButton.message;
       if (window.innerWidth > 768) {
         // Para telas maiores que 768px, abrir em uma nova aba
-        window.open(urlStr, "_blank");
+        window.open(urlStr, '_blank');
       } else {
         // Para telas menores, abrir na mesma aba
-        window.open(urlStr, "_self");
+        window.open(urlStr, '_self');
       }
     }, 2000);
   });
@@ -48,5 +48,5 @@ document
 const renderButton = {
   image:
     '<img class="footer__button--animation" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWI0azVpZzY1YzJqMDlxNjFlZHNhNmE0aGQ3dnhic2h4eGY2dmdhdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3o7bu3XilJ5BOiSGic/giphy.gif" alt="Loading">',
-  message: "SEND MESSAGE",
+  message: 'SEND MESSAGE',
 };

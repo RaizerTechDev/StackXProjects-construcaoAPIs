@@ -1,14 +1,14 @@
-const mongoose = require("mongoose");
-const fs = require("fs");
-const path = require("path");
+const mongoose = require('mongoose');
+const fs = require('fs');
+const path = require('path');
 
 // Verifica se está rodando no ambiente de produção (Vercel)
-const isVercel = process.env.VERCEL === "1";
+const isVercel = process.env.VERCEL === '1';
 
 // Define o caminho do arquivo de dados de acordo com o ambiente
 const dataFilePath = isVercel
-  ? path.join(__dirname, "../tmp/products.json")
-  : path.join(__dirname, "../data/products.json");
+  ? path.join(__dirname, '../tmp/products.json')
+  : path.join(__dirname, '../data/products.json');
 
 // Define o schema para o MongoDB
 const productSchema = new mongoose.Schema({
@@ -18,7 +18,7 @@ const productSchema = new mongoose.Schema({
   price: { type: Number, required: true, min: 0 },
 });
 
-const Product = mongoose.model("Product", productSchema);
+const Product = mongoose.model('Product', productSchema);
 
 // Função para garantir que o arquivo JSON exista
 function ensureFileExists() {
@@ -31,11 +31,11 @@ function ensureFileExists() {
 function readData() {
   ensureFileExists(); // Garantir que o arquivo exista
   try {
-    const data = fs.readFileSync(dataFilePath, "utf-8");
+    const data = fs.readFileSync(dataFilePath, 'utf-8');
     return JSON.parse(data); // Faz o parse do JSON
   } catch (err) {
     console.log(
-      "Arquivo não encontrado ou erro na leitura, iniciando com um array vazio."
+      'Arquivo não encontrado ou erro na leitura, iniciando com um array vazio.',
     );
     return [];
   }
@@ -46,7 +46,7 @@ function writeData(products) {
   try {
     fs.writeFileSync(dataFilePath, JSON.stringify(products, null, 2));
   } catch (err) {
-    console.error("Erro ao gravar os dados:", err);
+    console.error('Erro ao gravar os dados:', err);
   }
 }
 
@@ -56,7 +56,7 @@ module.exports = {
       try {
         return await Product.find();
       } catch (error) {
-        console.error("Erro ao buscar produtos no MongoDB:", error);
+        console.error('Erro ao buscar produtos no MongoDB:', error);
         throw error;
       }
     } else {
@@ -69,7 +69,7 @@ module.exports = {
       try {
         return await Product.findById(id);
       } catch (error) {
-        console.error("Erro ao buscar produto por ID no MongoDB:", error);
+        console.error('Erro ao buscar produto por ID no MongoDB:', error);
         throw error;
       }
     } else {
@@ -84,7 +84,7 @@ module.exports = {
       try {
         return await newProduct.save();
       } catch (error) {
-        console.error("Erro ao salvar produto no MongoDB:", error);
+        console.error('Erro ao salvar produto no MongoDB:', error);
         throw error;
       }
     } else {
@@ -105,20 +105,20 @@ module.exports = {
           new: true,
         });
       } catch (error) {
-        console.error("Erro ao atualizar produto no MongoDB:", error);
+        console.error('Erro ao atualizar produto no MongoDB:', error);
         throw error;
       }
     } else {
       const products = readData();
       const index = products.findIndex(
-        (product) => product.id.toString() === id
+        (product) => product.id.toString() === id,
       );
       if (index !== -1) {
         products[index] = { ...products[index], ...updatedProduct };
         writeData(products);
         return products[index];
       } else {
-        console.error("Produto não encontrado para atualizar.");
+        console.error('Produto não encontrado para atualizar.');
         return null;
       }
     }
@@ -129,7 +129,7 @@ module.exports = {
       try {
         return await Product.findByIdAndDelete(id);
       } catch (error) {
-        console.error("Erro ao deletar produto no MongoDB:", error);
+        console.error('Erro ao deletar produto no MongoDB:', error);
         throw error;
       }
     } else {
